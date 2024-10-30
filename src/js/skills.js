@@ -1,12 +1,12 @@
 "use strict";
 
 export function getSkills(obj) {
-    let skillsData = []
+    let skillsData = [];
     if (Object.prototype.hasOwnProperty.call(obj,'special')) {
         for (let item of obj['special'] ) {
-            const {id, name, icon, description = "Description is unavailable..."} = item
+            const {id, name, icon, description = "Description is unavailable..."} = item;
             skillsData.push({'id': id, 'name': name, 'icon': icon, 'description': description});
         }
-        return skillsData
+        return skillsData;
     } else { return "Hero doesn't have any special attacks..." }
 }
